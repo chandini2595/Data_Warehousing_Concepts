@@ -19,12 +19,15 @@
 
 **Types of Dimensions:**
 1. Slowly Changing : Changes slowly i.e., address
-2. Conformed : Used by mutliple facts i.e., time shared among multiple tables
-3. Degenerate : Fact table stores dimension values i.e., invoice number
-4. Junk : Combines two or more related low cardinality flags into a single dimension. i.e., T/F , 1/0 
-5. Role-playing : Date plays different roles in different tables. i.e., Ordered date, Shipped date...
-6. Static : Does not change eg., Gender
-7. Shrunken : Dimension further divided into smaller dimenions.
+   i. SCD 1 : Overrides with latest values
+   ii. SCD 2 : Stores the historical data with flags/ dates
+   iii. SCD 3: Stores historical data by adding new column
+3. Conformed : Used by mutliple facts i.e., time shared among multiple tables
+4. Degenerate : Fact table stores dimension values i.e., invoice number
+5. Junk : Combines two or more related low cardinality flags into a single dimension. i.e., T/F , 1/0 
+6. Role-playing : Date plays different roles in different tables. i.e., Ordered date, Shipped date...
+7. Static : Does not change eg., Gender
+8. Shrunken : Dimension further divided into smaller dimenions.
 
 **Types of fact tables:**
 1. Transaction Fact: Contains individual transaction info.
